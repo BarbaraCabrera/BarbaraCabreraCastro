@@ -11,7 +11,7 @@
 const CACHE_KEY = 'dc_geo';
 const ENDPOINT =
 	'https://api.bigdatacloud.net/data/reverse-geocode-client?localityLanguage=en';
-const TIMEOUT = 2500;
+const TIMEOUT = 800;
 
 let pending = null;
 
