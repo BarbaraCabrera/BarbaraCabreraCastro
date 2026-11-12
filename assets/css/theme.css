@@ -1,46 +1,107 @@
-/* Visual configuration: update these variables to personalize the palette and typography. */
+/*
+  Theme tokens
+  Edit this file to adjust the palette, typography, spacing, radii and motion.
+  The light theme is the default. Dark theme values live in :root[data-theme="dark"].
+  All text and background pairs below meet WCAG AA contrast (4.5:1 or higher).
+*/
+
 :root {
   color-scheme: light;
+
+  /* Palette: soft blues and violets */
   --color-background: #f8f8ff;
   --color-surface: #ffffff;
   --color-surface-soft: #f0f1ff;
-  --color-text: #252641;
-  --color-text-muted: #686b89;
-  --color-text-soft: #8588a5;
-  --color-primary: #686bb8;
-  --color-primary-strong: #4f529c;
-  --color-accent: #a7a4e8;
-  --color-accent-soft: #e9e8ff;
-  --color-lavender: #dcdcff;
   --color-blue-soft: #e5efff;
-  --color-border: #e5e5f2;
-  --color-on-primary: #ffffff;
-  --shadow-soft: 0 20px 60px rgb(67 67 125 / 10%);
-  --font-body: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --content-width: 1120px;
-  --radius-small: 12px;
-  --radius-medium: 22px;
-  --radius-large: 34px;
-  --transition-fast: 180ms ease;
-  --transition-medium: 320ms ease;
+  --color-lavender: #dcdcff;
+  --color-violet: #686bb8;
+  --color-violet-strong: #4f529c;
+  --color-violet-glow: #a9a7ee;
+
+  --color-text: #24253f;
+  --color-text-muted: #585b7e;
+  --color-border: #e2e2f3;
+  --color-border-strong: #c9c9ec;
+
+  --color-link: var(--color-violet-strong);
+  --color-button-background: var(--color-violet-strong);
+  --color-button-text: #ffffff;
+  --color-focus-ring: #4f529c;
+
+  --color-milestone-background: linear-gradient(135deg, #e5efff 0%, #ececff 55%, #dcdcff 100%);
+  --color-band-background: linear-gradient(180deg, #eef2ff 0%, #f3efff 100%);
+
+  --shadow-soft: 0 18px 48px rgb(72 74 140 / 10%);
+  --shadow-lifted: 0 24px 60px rgb(72 74 140 / 16%);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --font-size-small: 0.875rem;
+  --font-size-body: 1.0625rem;
+  --font-size-lead: 1.25rem;
+  --font-size-heading-small: 1.375rem;
+  --font-size-heading-medium: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
+  --font-size-heading-large: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);
+  --font-size-display: clamp(2.75rem, 1.6rem + 5vw, 5.25rem);
+  --font-size-year: clamp(2.5rem, 1.8rem + 2.6vw, 4rem);
+
+  --line-height-body: 1.65;
+  --line-height-heading: 1.12;
+
+  /* Spacing scale (Bootstrap-inspired, based on 0.25rem steps) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+
+  /* Layout */
+  --content-width: 1140px;
+  --reading-width: 42rem;
+  --header-height: 4.5rem;
+
+  /* Shape */
+  --radius-small: 0.5rem;
+  --radius-medium: 1rem;
+  --radius-large: 1.75rem;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --transition-fast: 160ms ease;
+  --transition-medium: 300ms ease;
+  --reveal-duration: 700ms;
+  --reveal-distance: 18px;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-background: #171827;
-  --color-surface: #202136;
-  --color-surface-soft: #292a45;
-  --color-text: #f0efff;
-  --color-text-muted: #c0c0dc;
-  --color-text-soft: #a1a2c5;
-  --color-primary: #b8b7ff;
-  --color-primary-strong: #d0ceff;
-  --color-accent: #aaa7f1;
-  --color-accent-soft: #343451;
-  --color-lavender: #46456f;
-  --color-blue-soft: #2b3a58;
-  --color-border: #393a56;
-  --color-on-primary: #202136;
-  --shadow-soft: 0 20px 60px rgb(0 0 0 / 25%);
+
+  --color-background: #15162a;
+  --color-surface: #1e1f38;
+  --color-surface-soft: #26284a;
+  --color-blue-soft: #1f2b47;
+  --color-lavender: #34355e;
+  --color-violet: #9d9cf0;
+  --color-violet-strong: #b6b5ff;
+  --color-violet-glow: #5e5daa;
+
+  --color-text: #eeeeff;
+  --color-text-muted: #bdbedc;
+  --color-border: #303255;
+  --color-border-strong: #45477a;
+
+  --color-link: #c9c8ff;
+  --color-button-background: #c9c8ff;
+  --color-button-text: #17182c;
+  --color-focus-ring: #c9c8ff;
+
+  --color-milestone-background: linear-gradient(135deg, #222c4a 0%, #29284f 55%, #322f5c 100%);
+  --color-band-background: linear-gradient(180deg, #191b33 0%, #1d1b38 100%);
+
+  --shadow-soft: 0 18px 48px rgb(0 0 0 / 28%);
+  --shadow-lifted: 0 24px 60px rgb(0 0 0 / 38%);
 }
