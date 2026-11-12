@@ -8,6 +8,7 @@
   var themeStorageKey = "barbara-website-theme";
   var rootElement = document.documentElement;
   var themeToggleButton = document.querySelector(".theme-toggle");
+  var themeToggleLabel = document.querySelector(".theme-toggle-label");
   var themeColorMeta = document.querySelector('meta[name="theme-color"]');
   var menuToggleButton = document.querySelector(".menu-toggle");
   var primaryNavigation = document.getElementById("primary-navigation");
@@ -41,10 +42,9 @@
     var isDarkTheme = themeName === "dark";
     rootElement.setAttribute("data-theme", isDarkTheme ? "dark" : "light");
 
-    if (themeToggleButton) {
-      // The button name stays constant; aria-pressed communicates the state.
-      themeToggleButton.setAttribute("aria-pressed", String(isDarkTheme));
-      themeToggleButton.setAttribute("title", isDarkTheme ? "Switch to light theme" : "Switch to dark theme");
+    if (themeToggleLabel) {
+      // The label names the theme the button will switch to.
+      themeToggleLabel.textContent = isDarkTheme ? "Light theme" : "Dark theme";
     }
 
     if (themeColorMeta) {
