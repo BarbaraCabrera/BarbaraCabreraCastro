@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#686bb8"/><stop offset="1" stop-color="#4f529c"/></linearGradient></defs><path d="M8 30a24 24 0 0 1 48 0v26a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z" fill="url(#background)"/><text x="32" y="47" font-family="Georgia, 'Times New Roman', serif" font-size="24" text-anchor="middle" fill="#f8f8ff">BC</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .arch { fill: url(#archFill); }
+    .letter { fill: #f8f8ff; }
+    @media (prefers-color-scheme: dark) {
+      .arch { fill: #c9c8ff; }
+      .letter { fill: #1e1f38; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="archFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#686bb8"/>
+      <stop offset="1" stop-color="#4f529c"/>
+    </linearGradient>
+  </defs>
+  <path class="arch" d="M4 30a28 28 0 0 1 56 0v26a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6Z"/>
+  <path class="letter" d="M45.57 46.28Q45.57 49.47 42.85 51.48Q40.13 53.5 34.65 53.5H19.92Q19.16 53.5 18.8 53.17Q18.43 52.84 18.43 52.27Q18.43 51.33 19.44 50.94L20.5 50.65Q21.08 50.46 21.39 50.12Q21.71 49.77 21.71 49.12V27.87Q21.71 27.22 21.39 26.88Q21.08 26.53 20.51 26.35L19.44 26.06Q18.43 25.67 18.43 24.73Q18.43 24.15 18.8 23.83Q19.16 23.5 19.92 23.5H31.37Q35.32 23.5 38.11 24.6Q40.91 25.69 42.38 27.65Q43.86 29.61 43.86 32.22Q43.86 34.36 42.67 36.05Q41.47 37.73 39.11 38.71Q36.75 39.68 33.23 39.68L34.42 38.93Q37.83 38.93 40.33 39.87Q42.83 40.8 44.2 42.46Q45.57 44.12 45.57 46.28ZM32.2 40.68H26.24V38.56H31.53Q33.48 38.56 34.82 37.87Q36.17 37.18 36.87 35.83Q37.57 34.49 37.57 32.55Q37.57 30.53 36.74 29.05Q35.92 27.56 34.3 26.73Q32.68 25.91 30.29 25.91H28.32V48.66Q28.32 49.89 29.02 50.49Q29.72 51.09 31.09 51.09H33.22Q35.11 51.09 36.39 50.48Q37.66 49.86 38.31 48.73Q38.96 47.59 38.96 46.07Q38.96 43.63 37.23 42.15Q35.5 40.68 32.2 40.68Z"/>
+</svg>
